@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ @font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
+    font-display: swap;
+ }
+
+
+.root{
+  --main-font:'Source Sans Pro',sans-serif;
+  --secondary-font:'Herr Von Muellerhoff',cursive;
+  --body-font:'Cabin',sans-serif;
+  --main-font-color-dark:#252525;
+  --secondary-font-color:#c59d5f;
+  --body-font-color:#515151;
+}
+
+html{
+  font-family:  var(--secondary-font);
+  color: var(--body-font-color);
+  scroll-behavior: smooth;
+  overflow: scroll;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.index_img{
+  margin-top: -1rem;
+  width: 100%;
+  height: 50vh;
+  background: url("/images/africa.jpg") center no-repeat ;
+  background-size: cover;
+
+}
+
+.bg {
+ 
+  width: 100%;
+ padding-top: 100%;
+  background-size:100% 100% ;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: opacity;
+ 
+ 
+}
+
+
+
+
+
+.layout{
+position: relative;
+;
+}
+
+.page{
+
+  top:0;
+  right: 0;
+  left: 0;
+  height: 100%;
+ }
+
+.index_header{
+  position: relative; 
+ 
+  width: 100vw;
+  display: flex;
+  
+  
+
+}
+
+.index_header_text{
+ font-family: 'Herr Von Muellerhoff',cursive;
+  font-weight: 800;
+  
+ 
+  color : white;
+  letter-spacing: 0.2rem;
+  padding-bottom: 2%;
+
+}
+
+.separator{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.line{
+  width: 100%;
+  max-width: 8.4rem;
+  height: .25rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.line-right::before,
+.line-left::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: .6rem solid transparent;
+  border-right-color: #fff;
+
+}
+
+.line-right::before{
+border-left-color: #fff;
+right: 0;
+}
+
+.line-left::before{
+  border-left-color: #fff;
+  left: 0;
+  }
+
+  .asterisk{
+
+  }
+
+  .headline_description{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.2rem;
+    margin-right: -3px;
+  }
+
+.index_header_countries{
+  font-size: large;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 10%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.countries{
+  position: relative;
+  height: 100%;
+}
+
+.countries_close{
+  
+  width: 100%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+ padding-right: 20px;
+  top: 2vh;
+  border-bottom-style: solid;
+}
+
+
+.welcome_div{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  padding: 15px;
+  font-family: 'Source Sans Pro',sans-serif;
+  text-align: center;
+  filter: drop-shadow(black);
+  font-size: 18px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+
+  border-style: solid;
+  border-width: thick;
+
+  
+  
+}
+
+.head_content{
+  width: 100%;
+  
+  margin-top: 1rem;
+  margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.head_content_1{
+  margin-bottom: 15px;
+  font-size: 6rem;
+  font-family: 'Herr Von Muellerhoff',cursive;
+  color: #c59d5f;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: .4;
+}
+
+.first-letter{
+  text-transform: uppercase;
+  font-size: 10.3rem;
+  
+}
+
+.head_content_2{
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #252525;
+  font-size: 3rem;
+  font-family: 'Source Sans Pro',sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .3rem;
+  margin-right: -.5rem;
+}
+
+
+
+
+.explore_hotel{
+  padding-top: 10%;
+}
+
+
+
+
+.hotels_description{
+  margin: 2rem 5px 2rem 5px;
+ width: 100%;
+  
+  padding-top:10% ;
+  padding-right: 2% ;
+  padding-left: 2%;
+display: block;
+}
+
+.hotels_description_titre{
+
+  font-weight: bolder;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: 0;
+ font-family: 'Gill Sans',  sans-serif;
+  color: black;
+ filter: drop-shadow(1px 1px 1px black);
+}
+
+.hotels_description_text{
+
+  
+  padding-top: 3%;
+  
+  font-family: 'Segoe UI',  sans-serif;
+ font-weight: lighter;
+ letter-spacing: 0;
+ font-size: 20px;
+ margin-bottom: 2rem;
+}
+
+
+.hotels_description_button{
+  
+  width: 35%;
+  height: 3rem;
+  padding: 10;
+  background-color: transparent;
+  border-style: solid;
+  border-width: thick;
+  border-color: black;
+  font-weight: 900;
+  font-size: 100%;
+  border-radius: 8px;
+}
+
+
+.explore_restaurants{
+  width: 100vw;
+padding-top: 20%;
+  position: relative;
+
+}
+
+
+.explore_restaurants_content{
+
+  
+  background-image:linear-gradient(rgba(92, 79, 79, 0), rgba(92, 79, 79, 0.0)), url('/images/cooking.jpg');
+  background-size:contain ;
+  background-repeat: no-repeat;
+  filter: drop-shadow(2px 4px 6px black) ;
+  padding-top: 66.66%;
+  opacity: 0.9;
+}
+
+
+.explore_restaurant_quote_div{
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  text-align: center;
+  padding: 3%;
+}
+
+.explore_retaurant_quote{
+  color: #fff;
+ 
+}
+
+@media screen and (min-width:600px){
+  .explore_retaurant_quote{
+    padding-top: 5%;
+    color: #fff;
+    font-size: 25px;
+  }
+}
+
+
+
+.head_content_restaurant{
+
+  padding-top: 20%;
+}
+
+
+.head_content_2_restaurant{
+
+  font-size: 2rem;
+  padding-top: 3%;
+}
+
+.restaurant_description{
+  margin: 2rem 5px 2rem 5px;
+    width: 100%;
+    padding-top: 5%;
+    padding-right: 2%;
+    padding-left: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurant_text{
+  text-align: center;
+}
+
+
+.restaurant_link{
+  text-align: center;
+  text-decoration: underline;
+  color: #c59d5f;
+  font-size: 1.3rem;
+
+}
+
+
+.restaurants_info_images_div{
+  padding: 5%;
+
+}
+
+
+.restaurant-info-images{
+height: 100%;
+width: 100%;
+  object-fit: cover;
+}
+
+
+.bottom-image{
+  height: 50%;
+}
+
+
+/*footer*/
+
+footer{
+  padding: 7.9rem 0;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-family: Georgia,  serif;
+}
+
+.back-to-top{
+  width: 7rem;
+  height: 7rem;
+  background-color: #121212;
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.back-to-top i{
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.foot-content{
+/*overflow: hidden;*/
+}
+
+.footer-content h4{
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+
+
+}
+
+.footer-content .asterisk{
+  margin: 2.4rem 0;
+  
+}
+.footer-content .asterisk i{
+  color: #c59d5f;
+  
+}
+
+
+.footer-content-about{
+  margin-bottom: 5.4rem;
+}
+
+.footer-content h4{
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-bottom: 3rem;
+}
+
+.footer-content-about p{
+line-height: 2;
+padding: 3%;
+}
+
+.social-icons{
+  list-style: none;
+  margin-bottom: 5.4rem;
+  display: flex;
+  justify-content: center;
+
+}
+
+.social-icons i{
+  font-size: 2rem;
+  color: #fff;
+  padding: .8rem 2rem;
+  opacity: .5;
+  transition: color .5s;
+}
+
+.social-icons i:hover,
+.social-icons i:focus{
+  color:#c59d5f;
+
+}
+
+/*media queries */
+
+@media screen and (max-width : 500px){
+
+body{
+  font-size: 10vmin;
+}
+}
