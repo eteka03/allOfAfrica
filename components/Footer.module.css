@@ -1,0 +1,17 @@
+.footer{
+    max-width:100%;
+    margin:0;
+      background-color:black;
+      color:red;
+  }
+
+
+  .about{
+      margin-top:1rem;
+      margin-bottom:2rem;
+  }
+
+
+@import url('../node_modules/bootstrap/dist/css/bootstrap.min.css') ;
+
+

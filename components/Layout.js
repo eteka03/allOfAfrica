@@ -10,7 +10,7 @@ export default function Layout({children}) {
         <div className="layout grid-container">
             <Head>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
-
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"/>
             
             </Head>
 
@@ -23,7 +23,7 @@ export default function Layout({children}) {
             </main>
            
             <footer className="app-footer">
-                <Footer />
+                <Footer styl={{couleur:'#fff', back:'#000'}}/>
             </footer>
 
          
@@ -36,12 +36,16 @@ export default function Layout({children}) {
                     padding:0;
                     
                     overflow-x: hidden;
+                    font-family:'Open Sans', sans-serif;
                 }
-               
+
+                .h1,h1{
+                    margin-bottom:1rem;
+                }
                 .layout{
                     display:grid ;
                     
-                    grid-template-columns: 100% ;                                    
+                    grid-template-rows: 1fr auto;                               
                 }
 
                 .app-head{
@@ -63,7 +67,8 @@ export default function Layout({children}) {
 
                 .app-footer{
                   
-                    display:block
+                   
+                    grid-row: 2 / 3; 
                 }
 
 
@@ -75,7 +80,7 @@ export default function Layout({children}) {
 
                 @media (max-width:768px){
                     html,body{
-                        font-size: calc(14px + 2 * ((100vw - 360px) / 768))
+                        font-size: calc(12px + 2 * ((100vw - 360px) / 768))
                     }
                 }
                 

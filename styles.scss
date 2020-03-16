@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 
 
 .root{
@@ -13,7 +15,7 @@ html{
     $minFontSize: 16px;
     $maxFontSize: 36px;
     $scaler:3vw;
-
+    font-family: 'Open Sans', sans-serif;
    
 
     font-size: clamp($minFontSize,$scaler,$maxFontSize);
@@ -29,6 +31,7 @@ html{
 box-sizing: border-box;
     
 }
+
 
 
 
@@ -121,7 +124,7 @@ $shadow: rgba($yellow, .5);
     width: 100%;
     height: 40vh;
     
-     .row{
+     .row-services{
          width: 100%;
          height: 50%;
          border-style: solid;
@@ -185,8 +188,8 @@ $shadow: rgba($yellow, .5);
  }
 
     .div-title{
-        display: block;
-        height: 10%;
+        display: inline-block;
+     
     }
 
     .culture-text-image-div{
@@ -319,45 +322,6 @@ $shadow: rgba($yellow, .5);
 
 
 
-.drop {
-  position: relative;
-	width: 20px;
-	height: 20px;
-  top: -10px;
-  margin: 0 auto;
-	background: #FFF;
-	-moz-border-radius: 20px;
-	-webkit-border-radius: 20px;
-	border-radius: 20px;
-  -moz-animation-name: drip;
-  -webkit-animation-name: drip;
-  animation-name: drip;
-  -moz-animation-timing-function: cubic-bezier(1,0,.91,.19);
-  -webkit-animation-timing-function: cubic-bezier(1,0,.91,.19);
-  animation-timing-function: cubic-bezier(1,0,.91,.19);
-  -moz-animation-duration: 5s;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  animation-delay: 2s;
-}
-
-.drop:before {
-  content: "";
-  position: absolute;
-  width: 0;
-	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 30px solid rgba(255,255,255,1);
-  top: -22px;
-}
-
-
-
-
 
 @keyframes drip {
   10%{
@@ -367,7 +331,6 @@ $shadow: rgba($yellow, .5);
       top: 130px;
     }
 }
-
 
 
 

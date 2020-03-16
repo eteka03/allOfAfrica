@@ -1,7 +1,6 @@
 
 import React from 'react'
-import 'bootstrap/dist/css/bootstrap.css'
-import {Button} from 'reactstrap'
+
 
 export default function index() {
 
@@ -23,7 +22,7 @@ export default function index() {
         <div className="services">
 
          
-          <div className="row">
+          <div className="row-services">
 
               <div>
                   <img className="services-image" width="100%" height="60%" src={require('../public/images/icons/hotel.svg')} 
@@ -46,7 +45,7 @@ export default function index() {
         
           </div>
           
-          <div className="row">
+          <div className="row-services">
                 <div>
                   <img className="services-image" width="100%" height="50%" src={require('../public/images/icons/hotel.svg')} 
                     alt="undefined"
@@ -80,7 +79,7 @@ export default function index() {
             </div>
 
             <div className="culture-text-div">
-              <h3 className="card-header">En Afrique,</h3>
+              <h3 className="">En Afrique,</h3>
 
               <h4 className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam. Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum magna</h4>
 
@@ -105,7 +104,7 @@ export default function index() {
               </div>
 
               <div className="cuisine-div-text">
-              <h3 className="card-header">En Afrique,</h3>
+              <h3 className="">En Afrique,</h3>
 
               <h4 className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam. Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum magna</h4>
 
@@ -117,7 +116,7 @@ export default function index() {
         <div className="culture">
               <h1 style={{textAlign:'center'}}>culture</h1>
            
-           <div style={{width:'100%',height:'80%',filter:'drop-shadow(6px 6px 8px black)'}}>
+           <div style={{width:'100%',height:'80%',filter:'drop-shadow(6px 6px 8px black)',WebkitFilter:'drop-shadow(6px 6px 8px black)'}}>
              <img alt="undefined" src={require('../public/images/three-women-wearing-black-clothes.jpg')} width="100%" height="100%" style={{objectFit:'contain'}}/>
            </div>
               <div style={{textAlign:'center',marginTop:'1rem'}}>
@@ -129,9 +128,7 @@ export default function index() {
         </div>
 
 
-          <div>
-     
-          </div>
+         
 
       </div>
 
@@ -159,13 +156,15 @@ export default function index() {
        color:rgba(45,45,45,1);
         text-shadow: 0 2px 0 rgba(0,0,0,0.5);
         
-       font-size:3rem
+       font-size:5rem;
+       font-family:'sans-serif';
+       font-weight:900;
       }
 
       .allOf:after{
         content:'All of';
        color:rgba(45,45,45,1);
-       font-size: 4rem;
+       font-size: 5rem;
        font-weight:900;
       }
 
@@ -225,7 +224,7 @@ export default function index() {
       .cuisine-div{
        
         
-        margin-top: 8vh;
+        margin-top: 20vh;
        display:block;
 
     }
@@ -288,7 +287,8 @@ export default function index() {
       display:block;
       width:100%;
       background-color:rgb(0,0,0,0.02);
-      margin-top:10vh;
+      margin-top:6rem;
+      margin-bottom:2rem;
       padding:1rem;
      
     
