@@ -9,8 +9,12 @@ import {
     Label,
     Input,
     FormFeedback,
-    Button
-        } from 'reactstrap'
+    Button,
+    
+        } from 'reactstrap';
+
+import Face from '../public/images/icons/facebook.svg'
+import Instagram from '../public/images/icons/instagram.svg'
 
 export default function Footer(props) {
     return (
@@ -43,13 +47,41 @@ export default function Footer(props) {
                   </Form>
                 </Col>
 
-                <Col >
-                 <h1>follow us</h1>
+                <Col className="social-media-links">
+                 <h3>Follow Us</h3>
+
+                 <div className="social-media-div">
+                 <a href="https://www.facebook.com/allofafrica">
+                   <Face />
+
+                   </a>
+
+                   <a href="https://www.instagram.com/all_of_africa_aoa">
+                 
+                    <Instagram />
+                   </a>
+             
+                   </div>
+
+                   <div className="tel-mail-div">
+                   <address>
+                       <p>Tel:</p>
+                        <a href="tel:+1-347-272-7227">+1 (347) 272-7227 (USA)</a>
+                        <a href="tel:+33788 735324">+33 788 735324 (France)</a>
+                        <a href="tel:+221778012953">+221 7780 12953" (Dakar)</a>
+
+                        <p style={{lineHeight:'1.5rem'}}>Email: </p>
+                      <a href="mailto:alloafrica@outlook.fr">alloafrica@outlook.fr</a>
+                    </address>  
+                   </div>
                 </Col>
 
                
             </Row>
 
+            <div className="copyright-div">
+            <i className='fas fa-copyright'><span>copyright 2020</span></i>
+            </div>
 
     <style jsx global>{`
     
@@ -65,6 +97,45 @@ export default function Footer(props) {
     .about-div{
         margin-top:1rem;
         margin-bottom:2rem;
+    }
+
+
+    .contact-div{
+        margin-bottom:2rem;
+    }
+    
+
+    .social-media-div{
+        display:flex;
+        flex-direction:row;
+        justify-content:flex-start;
+        align-items:center;
+        width:100%;
+        margin-bottom:1.5rem;
+    }
+
+    .social-media-div a{
+       width:4rem;
+       text-decoration:none;
+      margin-left:0.7rem;
+    }
+
+
+
+    .tel-mail-div a{
+
+        display:block;
+        color:#fff;
+        line-height:1.5rem;
+      
+    }
+
+    .copyright-div{
+        display:block;
+        width:100%;
+        text-align:center;
+        border-top-style:solid;
+        border-width:1px;
     }
     
     `}</style>

@@ -286,7 +286,8 @@ $shadow: rgba($yellow, .5);
 .cuisine-div{
 
     .cuisine-images-carousel{
-        width: 100vw;
+      overflow-x: hidden;
+        width: 100%;
      height: 50vh;
         padding: 0.5vw;
         position: relative;

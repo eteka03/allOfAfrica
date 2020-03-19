@@ -35,7 +35,7 @@ export default function Layout({children}) {
                     margin:0;
                     padding:0;
                     
-                    overflow-x: hidden;
+                   
                     font-family:'Open Sans', sans-serif;
                 }
 
@@ -80,7 +80,7 @@ export default function Layout({children}) {
 
                 @media (max-width:768px){
                     html,body{
-                        font-size: calc(12px + 2 * ((100vw - 360px) / 768))
+                        font-size: calc(11px + 2 * ((100vw - 360px) / 768))
                     }
                 }
                 
