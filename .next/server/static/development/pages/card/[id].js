@@ -88,10 +88,58 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./datas/countriesData.js":
+/*!********************************!*\
+  !*** ./datas/countriesData.js ***!
+  \********************************/
+/*! exports provided: countries */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "countries", function() { return countries; });
+const countries = [{
+  id: 0,
+  pays: 'senegal',
+  hotels: [{
+    id: 0,
+    name: 'radisson',
+    image: 'afric.jpg'
+  }, {
+    id: 1,
+    name: 'dakar',
+    image: 'afric.jpg'
+  }],
+  restaurants: [{
+    id: 0,
+    name: 'sene_resto',
+    image: 'afric.jpg'
+  }]
+}, {
+  id: 1,
+  pays: 'Burkina Faso',
+  hotels: [{
+    id: 2,
+    name: 'burki',
+    image: 'afric.jpg'
+  }, {
+    id: 3,
+    name: 'faso',
+    image: 'afric.jpg'
+  }],
+  restaurants: [{
+    id: 1,
+    name: 'burki_resto',
+    image: 'afric.jpg'
+  }]
+}];
+
+/***/ }),
 
 /***/ "./pages/card/[id].js":
 /*!****************************!*\
@@ -106,8 +154,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticPaths", function() { return getStaticPaths; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! node-fetch */ "node-fetch");
-/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(node_fetch__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _datas_countriesData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../datas/countriesData */ "./datas/countriesData.js");
 var _jsxFileName = "C:\\Users\\eteka\\AllofAfrica\\pages\\card\\[id].js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -128,8 +175,7 @@ const Card = ({
 async function getStaticProps({
   params
 }) {
-  const rep = await node_fetch__WEBPACK_IMPORTED_MODULE_1___default()('http://localhost:3000/api/all/discover');
-  const allpaths = await rep.json();
+  const allpaths = _datas_countriesData__WEBPACK_IMPORTED_MODULE_1__["countries"];
   let restos = [];
   let leshotels = [];
   allpaths.map(pays => pays.restaurants).forEach(tabresto => tabresto.map(resto => restos.push(resto)));
@@ -143,8 +189,7 @@ async function getStaticProps({
   };
 }
 async function getStaticPaths() {
-  const rep = await node_fetch__WEBPACK_IMPORTED_MODULE_1___default()('http://localhost:3000/api/all/discover');
-  const allpaths = await rep.json();
+  const allpaths = _datas_countriesData__WEBPACK_IMPORTED_MODULE_1__["countries"];
   let paths = [];
   let restos = [];
   let leshotels = [];
@@ -165,7 +210,7 @@ async function getStaticPaths() {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!**********************************!*\
   !*** multi ./pages/card/[id].js ***!
   \**********************************/
@@ -174,17 +219,6 @@ async function getStaticPaths() {
 
 module.exports = __webpack_require__(/*! C:\Users\eteka\AllofAfrica\pages\card\[id].js */"./pages/card/[id].js");
 
-
-/***/ }),
-
-/***/ "node-fetch":
-/*!*****************************!*\
-  !*** external "node-fetch" ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("node-fetch");
 
 /***/ }),
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import fetch from 'node-fetch'
+import {countries} from '../../datas/countriesData'
 
 const Card = ({lesdatas}) => {
 
@@ -9,8 +9,8 @@ return <h1>{lesdatas.name}</h1>
 
 export async function getStaticProps({params}){
 
-    const rep = await fetch('http://localhost:3000/api/all/discover')
-    const allpaths =  await rep.json();
+ 
+    const allpaths =  countries
  
     
    let  restos =[] 
@@ -33,8 +33,8 @@ export async function getStaticProps({params}){
 }
 
 export async function getStaticPaths(){
-    const rep = await fetch('http://localhost:3000/api/all/discover')
-     const allpaths =  await rep.json();
+    
+     const allpaths =  countries
   
      let paths = [] 
     let  restos =[] 
