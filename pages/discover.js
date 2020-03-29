@@ -2,8 +2,8 @@ import React,{useState} from 'react'
 
 import Link from 'next/link'
 import {useRouter} from 'next/router'
-import fetch from 'node-fetch'
 
+import {countries as Pays } from '../datas/countriesData'
 import Image from '../components/Image'
 import Card from '../components/Cards'
 import
@@ -179,10 +179,10 @@ const Discover = ({countries}) => {
 }
 
 export async function getStaticProps(){
-    const res =  await fetch('http://localhost:3000/api/all/discover')
+ 
     
  
-    const countries = await res.json()
+    const countries = Pays
 
     
 
