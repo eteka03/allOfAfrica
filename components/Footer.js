@@ -94,6 +94,8 @@ export default function Footer(props) {
     }
 
 
+   
+
     .about-div{
         margin-top:1rem;
         margin-bottom:2rem;

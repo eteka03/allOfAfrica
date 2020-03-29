@@ -19,6 +19,7 @@
     "animate.css": "^3.7.2",
     "babel-plugin-inline-react-svg": "^1.1.1",
     "bootstrap": "^4.4.1",
+    "file-loader": "^6.0.0",
     "image-trace-loader": "^1.0.2",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
@@ -29,11 +30,16 @@
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.4",
     "next-transpile-modules": "^3.0.2",
+    "node-fetch": "^2.6.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-lazy-load-image-component": "^1.4.1",
+    "react-multi-carousel": "^2.5.3",
     "reactstrap": "^8.4.1",
-    "responsive-loader": "^1.2.0"
+    "responsive-loader": "^1.2.0",
+    "swr": "^0.1.18",
+    "url-loader": "^4.0.0"
   },
   "devDependencies": {}
 }

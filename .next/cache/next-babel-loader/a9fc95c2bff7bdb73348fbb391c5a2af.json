@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { countries } from '../../../datas/countriesData';\nexport default ((req, res) => {\n  res.status(200).json(countries);\n});","map":null,"metadata":{},"sourceType":"module"}

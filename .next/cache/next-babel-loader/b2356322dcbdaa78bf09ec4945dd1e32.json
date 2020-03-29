@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const countries = [{\n  id: 0,\n  pays: \"senegal\"\n}, {\n  id: 0,\n  pays: \"burkina\"\n}];","map":null,"metadata":{},"sourceType":"module"}

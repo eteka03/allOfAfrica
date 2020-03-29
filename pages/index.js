@@ -8,7 +8,7 @@ export default function index() {
     return (
         <>
      <div className="index-page">
-       <div className="index-header">
+       <div className="index-header" style={{backgroundImage:"url("+ `${require('../public/images/afric.jpg')}` + ")"}}>
           <div className="presentation">
              <h3 className="allOf"></h3>
              <h1 className="africa" >Africa</h1>
@@ -117,7 +117,7 @@ export default function index() {
               <h1 style={{textAlign:'center'}}>culture</h1>
            
            <div style={{width:'100%',height:'80%',filter:'drop-shadow(6px 6px 8px black)',WebkitFilter:'drop-shadow(6px 6px 8px black)'}}>
-             <img alt="undefined" src={require('../public/images/three-women-wearing-black-clothes.jpg')} width="100%" height="100%" style={{objectFit:'contain'}}/>
+             <img alt="undefined" src={require('../public/images/three-women-wearing-black-clothe.jpg')} width="100%" height="100%" style={{objectFit:'contain'}}/>
            </div>
               <div style={{textAlign:'center',marginTop:'1rem'}}>
              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam. Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum magna</span>
@@ -191,8 +191,8 @@ export default function index() {
         width:100%;
         height:100vh;
   
-        background-image:url('../images/afric.jpg') ; 
         
+      
         background-size:cover;
         background-position:center;
         position:relative
