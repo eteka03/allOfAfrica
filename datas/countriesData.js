@@ -43,6 +43,11 @@ export  const countries = [
                 id:1,
                 name:'burki_resto',
                 image:'afric.jpg'
+            },
+            {
+                id:2,
+                name:'one_resto',
+                image:'afric.jpg'
             }
         ]
     } ,

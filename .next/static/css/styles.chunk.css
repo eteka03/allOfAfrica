@@ -94,6 +94,8 @@ html {
         max-width: 100%;
         max-height: 60%;
         color: #f0ad1e; }
+      .services .row-services div h5 {
+        font-weight: bold; }
   .services:after {
     content: "";
     display: table;
@@ -122,7 +124,7 @@ html {
     width: 50%;
     height: 100%;
     float: left; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       .culture-div .culture-image-div {
         display: block;
         height: 50%;
@@ -156,7 +158,7 @@ html {
       left: 50%;
       transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
       border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 768px) {
       .culture-div .culture-text-div {
         display: block;
         width: 100%;
@@ -203,12 +205,69 @@ html {
   display: table;
   clear: both; }
 
-@keyframes drip {
-  10% {
-    opacity: 0.2; }
-  to {
-    top: 130px; } }
+.bigscreen-services-section {
+  background-color: rgba(0, 0, 0, 0.1); }
 
-@font-face{font-family:"revicons";fallback:fallback;src:url([object Module]) format('woff'),url([object Module]) format('ttf'),url([object Module]) format('ttf')}.react-multi-carousel-list{display:flex;align-items:center;overflow:hidden;position:relative}.react-multi-carousel-track{list-style:none;padding:0;margin:0;display:flex;flex-direction:row;position:relative;transform-style:preserve-3d;backface-visibility:hidden;will-change:transform,transition}.react-multiple-carousel__arrow{position:absolute;outline:0;transition:all .5s;border-radius:35px;z-index:1000;border:0;background:rgba(0,0,0,0.5);min-width:43px;min-height:43px;opacity:1;cursor:pointer}.react-multiple-carousel__arrow:hover{background:rgba(0,0,0,0.8)}.react-multiple-carousel__arrow::before{font-size:20px;color:#fff;display:block;font-family:revicons;text-align:center;z-index:2;position:relative}.react-multiple-carousel__arrow--left{left:calc(4% + 1px)}.react-multiple-carousel__arrow--left::before{content:"\E824"}.react-multiple-carousel__arrow--right{right:calc(4% + 1px)}.react-multiple-carousel__arrow--right::before{content:"\E825"}.react-multi-carousel-dot-list{position:absolute;bottom:0;display:flex;left:0;right:0;justify-content:center;margin:auto;padding:0;margin:0;list-style:none;text-align:center}.react-multi-carousel-dot button{display:inline-block;width:12px;height:12px;border-radius:50%;opacity:1;padding:5px 5px 5px 5px;box-shadow:none;transition:background .5s;border-width:2px;border-style:solid;border-color:grey;padding:0;margin:0;margin-right:6px;outline:0;cursor:pointer}.react-multi-carousel-dot button:hover:active{background:#080808}.react-multi-carousel-dot--active button{background:#080808}.react-multi-carousel-item{transform-style:preserve-3d;backface-visibility:hidden}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.react-multi-carousel-item{flex-shrink:0 !important}.react-multi-carousel-track{overflow:visible !important}}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .index-header {
+    background-image: url("/images/lion-small.jpg"); }
+  .cuisine-div-text {
+    width: 100%;
+    display: block;
+    margin-top: 5%; }
+  .bigscreen-section {
+    display: none; }
+  .bigscreen-culture-section {
+    display: none; }
+  .bigscreen-cuisine-section {
+    display: none; }
+  .bigscreen-services-section {
+    display: none; } }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+  .index-header {
+    background-image: url("/images/lion-medium.jpg"); }
+  .culture-div {
+    display: none; }
+  .cuisine-div {
+    display: none; }
+  .culture {
+    display: none; }
+  .services {
+    display: none; } }
+
+.product-welcome-section,
+.product-photos-section {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.descriptif-div span,
+.product-welcome-section span {
+  color: rgba(0, 0, 0, 0.7); }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .index-header {
+    background-image: url("/images/lion-medium.jpg"); }
+  .descriptif-div {
+    text-align: center;
+    padding-right: 25%;
+    padding-left: 25%;
+    padding-bottom: 2rem; } }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .index-header {
+    background-image: url("/images/lion-big.jpg"); }
+  .presentation {
+    transform: translate(50%, -70%);
+    -webkit-transform: translate(50%, -70%); } }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .index-header {
+    background-image: url("/images/lion-big.jpg"); } }
+
 
 /*# sourceMappingURL=styles.chunk.css.map*/

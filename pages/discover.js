@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 import Link from 'next/link'
-import {useRouter} from 'next/router'
+
 
 import {countries as Pays } from '../datas/countriesData'
 import Image from '../components/Image'
@@ -66,24 +66,20 @@ const responsive = {
 const Discover = ({countries}) => {
 
         const [catVal,setCatVal] = useState('Tous')
-        const router = useRouter()
+        
     const handleChange = e => {
 
         setCatVal(e.target.value)
             
     }
 
-    const handleRoute = h => {
    
-        router.push(`/card/[id]?Id=${h.id}&dataId=${h.name}`,`/card/[id]?Id=${h.id}&dataId=${h.name}`)
-       
-    }
 
     return(
-        <Container style={{padding: 0,maxWidth:'100%' , margin: 0}}>
+        <Container className="discover-container" style={{padding: 0,maxWidth:'100%' , margin: 0}}>
           
-            <header className="discover-header">
-                <Image image={{width:'100%',height:'100%',alt:'pagne img',src:'/images/pagne.jpg'}} />
+            <header className="discover-header" style={{backgroundImage:'url(/images/pagne.jpg)',backgroundSize:'cover',backgroundRepeat:'no-repeat'}}>
+          
             </header>
 
             <section className="filtre-section">
@@ -93,11 +89,10 @@ const Discover = ({countries}) => {
         <FormGroup className="form-discover">
             <Label for="exampleSelect">Pays</Label>
             <Input type="select" name="select" id="exampleSelect">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            <option>Tout</option>
+            <option>Senegal</option>
+            <option>Burkina Faso</option>
+          
             </Input>
       </FormGroup>
  
@@ -117,10 +112,10 @@ const Discover = ({countries}) => {
                 {
                     catVal === 'Tous' ? categories.find(cat => cat.name === 'Tous' )
                     .titrediv.split(" ")
-                    .map(val => <div key={val}><h1>{val}</h1>
+                .map(val => <div className="categories-div" key={val}><header><h1>{val}</h1></header>
                     {
-                       val === "Hotelerie"?<Carousel responsive={responsive}>{countries.map(c=>c.hotels.map(h=><div key={h.name}><Link href={`/card/[id]`} as={`/card/${h.name}`} passHref><Card name={h.name} image={h.image} body={h.name} /></Link></div>))}</Carousel>:
-                  <Carousel responsive={responsive}> {  countries.map(c=>c.restaurants.map(h=><div key={h.name}><Link href={`/card/[id]`} as={`/card/${h.name}`}><h1>{h.name}</h1></Link></div>))}</Carousel>  
+                       val === "Hotelerie"?<Carousel containerClass="caroussel-container"  itemClass="caroussel-items" sliderClass="caroussel-slide"  responsive={responsive}>{countries.map(c=>c.hotels.map(h=><div className="card-div" key={h.name}><Link href={`/card/[id]`} as={`/card/${h.name}`} passHref><Card name={h.name} image={h.image} body={h.name} /></Link></div>))}</Carousel>:
+                  <Carousel containerClass="caroussel-container"  itemClass="caroussel-items" sliderClass="caroussel-slide"  responsive={responsive}> { countries.map(c=>c.restaurants.map(h=><div className="card-div" key={h.name}><Link href={`/card/[id]`} as={`/card/${h.name}`} passHref><Card name={h.name} image={h.image} body={h.name} /></Link></div>))}</Carousel>  
                        }
                        </div>)
                     
@@ -132,7 +127,12 @@ const Discover = ({countries}) => {
             </section>
 
 
-    <style jsx>{`
+    <style jsx global>{`
+
+    
+    .discover-container{
+        overflow-x:hidden;
+    }
     
     .discover{
         padding:0;
@@ -142,6 +142,10 @@ const Discover = ({countries}) => {
 
     .discover-header{
         height:25vh;
+    }
+
+    .filtre-section label{
+        font-weight:bold
     }
 
     .filter-div{
@@ -160,17 +164,60 @@ const Discover = ({countries}) => {
 
     }
 
+    .categories-div{
+        margin-bottom:2.5rem;
+    }
+
+    .categories-div header{
+        padding-bottom:1.5rem;
+        
+    }
+
+    .categories-div header h1{
+        font-weight:bold;
+    }
+
+    
+
+    .card-div{
+   height:100%
+    }
+
     .react-multi-carousel-list {
         width:100vw;
     }
 
-    @media only screen and (min-width:600px){
+    @media (min-width: 600px){
+        .h1,h1{
+            font-size: 2rem;
+        }
+        .categories-section{
+            padding-left:3rem;
+        }
+
         .form-discover{
             width:45% ;
             float:left;
             margin-left: 1em;
         }
+    
+        .caroussel-container{
+            height: 600px;
+            width:85vw;
+        }
+
+        .caroussel-items{
+            height:100%;
+            width:250px
+        }
+
+        .caroussel-slide{
+            height:95%
+        }
+    
     }
+
+    
     
     `}</style>
 

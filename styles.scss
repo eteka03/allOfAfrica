@@ -154,6 +154,10 @@ $shadow: rgba($yellow, .5);
 
              }
 
+             h5{
+               font-weight: bold;
+             }
+
          }
      }
 
@@ -202,7 +206,7 @@ $shadow: rgba($yellow, .5);
         width: 50%;
         height: 100%;
         float: left;
-        @media screen and (max-width:600px){
+        @media screen and (max-width:768px){
             display: block;
             height: 50%;
             width: 100%;
@@ -247,7 +251,7 @@ $shadow: rgba($yellow, .5);
             }
         
 
-        @media screen and (max-width:600px){
+        @media screen and (max-width:768px){
             
            display: block;
             width: 100%;
@@ -321,19 +325,123 @@ $shadow: rgba($yellow, .5);
 }
 
 
-
-
-
-@keyframes drip {
-  10%{
-    opacity: 0.2;
-  }
-    to {
-      top: 130px;
-    }
+.bigscreen-services-section {
+  
+background-color: rgba($color: #000000, $alpha: 0.1)
 }
 
 
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+  
+    .index-header{
+      background-image: url('/images/lion-small.jpg');
+    }
+    .cuisine-div-text{
+      width:100%;
+      display:block;
+      margin-top:5%;
+    }
+    .bigscreen-section{
+      display: none;
+    }
+
+    .bigscreen-culture-section{
+      display: none;
+    }
+
+    .bigscreen-cuisine-section{
+      display: none;
+    }
+
+    .bigscreen-services-section{
+      display: none;
+    }
+
+
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 601px) {
+    .index-header{
+      background-image: url('/images/lion-medium.jpg');
+    }
+
+    .culture-div{
+      display: none;
+    }
+    .cuisine-div{
+      display: none;
+    }
+
+    .culture{
+      display: none;
+    }
+
+    .services{
+      display: none;
+    }
+
+    
+  }
+  
+
+  .product-welcome-section,
+  .product-photos-section
+  {
+    background-color: transparentize($color: #000000, $amount: 0.95);
+  }
+
+  
+     
+  .descriptif-div span,
+  .product-welcome-section span{
+    color: transparentize($color:#000, $amount: 0.3);
+  }
+  
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .index-header{
+      background-image: url('/images/lion-medium.jpg');
+    }
+    
+
+    .descriptif-div{
+    
+      text-align:center;
+     padding-right:25%;
+     padding-left:25%;
+      padding-bottom:2rem;
+    }
+  }
+  
+  
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .index-header{
+      background-image: url('/images/lion-big.jpg');
+    }
+      
+    .presentation{
+      transform: translate(50%,-70%);
+      -webkit-transform: translate(50%,-70%);
+    }
+  }
+  
+  
+  
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .index-header{
+      background-image: url('/images/lion-big.jpg');
+    }
+  
+  
+  }
 
 
 

@@ -21,6 +21,8 @@ export default function Layout({children}) {
             <main className='app-page'>
                 {children}
             </main>
+
+            <div style={{clear:'both'}}></div>
            
             <footer className="app-footer">
                 <Footer styl={{couleur:'#fff', back:'#000'}}/>
@@ -39,13 +41,16 @@ export default function Layout({children}) {
                     font-family:'Open Sans', sans-serif;
                 }
 
-                .h1,h1{
-                    margin-bottom:1rem;
-                }
+                
                 .layout{
-                    display:grid ;
-                    
-                    grid-template-rows: 1fr auto;                               
+                    min-height: 100%;
+                    display: flex;
+                    flex-direction: column;                             
+                }
+
+                .app-head,
+                .app-footer{
+                    flex-shrink: 0;
                 }
 
                 .app-head{
@@ -59,28 +64,24 @@ export default function Layout({children}) {
                 }
 
                 .app-page{
+                    flex-grow: 1;
                     position:relative;
                     top:0;
          
                    
                 }
 
-                .app-footer{
-                  
-                   
-                    grid-row: 2 / 3; 
-                }
 
 
                 @media (min-width:769px){
                     html,body{
-                        font-size: calc(14px + 10 * ((100vw - 769px) / 2048))
+                        font-size: calc(13px + 10 * ((100vw - 769px) / 2048))
                     }
                 }
 
                 @media (max-width:768px){
                     html,body{
-                        font-size: calc(11px + 2 * ((100vw - 360px) / 768))
+                        font-size: calc(14px + 2 * ((100vw - 360px) / 768))
                     }
                 }
                 
