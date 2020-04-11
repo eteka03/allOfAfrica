@@ -243,7 +243,7 @@ export default function index() {
        color:rgba(45,45,45,1);
         text-shadow: 0 2px 0 rgba(0,0,0,0.5);
         
-       font-size:5rem;
+       font-size:2.5rem;
        font-family:'sans-serif';
        font-weight:900;
       }
