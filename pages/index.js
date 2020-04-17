@@ -1,33 +1,44 @@
 
 import React from 'react'
 
+import Link from 'next/link'
 import Caroussel from '../components/Caroussel'
 
 import {LazyLoadImage} from 'react-lazy-load-image-component'
 
 import {
-  Row,
-  Col,
-  Carousel,
-} from 'reactstrap'
+  Link as Linkscroll
 
+} from 'react-scroll'
+
+
+import { NextSeo } from 'next-seo';
 
 export default function index() {
 
 
     return (
         <>
+
+        <NextSeo 
+          title="home page"
+          description="page index du site"
+        />
+
+        
      <div className="index-page">
        <div className="index-header" >
           <div className="presentation">
-             <h3 className="allOf"></h3>
+             <span aria-label='hi' className="allOf"></span>
              <h1 className="africa" >Africa</h1>
-            
-            <a  className="explore-link">Explorez</a>
+           
+          <Linkscroll tabIndex={0} to="main-business" spy={true} smooth={true} offset={50} duration={500}> 
+           <button  className="explore-link" >Explorez</button> 
+          </Linkscroll> 
           </div>
        </div>
 
-      <div className="main-business">
+      <div name="main-bus" className="main-business">
 
         <div className="services">
 
@@ -81,6 +92,9 @@ export default function index() {
         <div className="culture-div">
           <div className="div-title">
               <h1>Découvrez nos paysages</h1>
+               
+              <i style={{textAlign:"center",paddingBottom:'2rem'}} className="fas fa-asterisk"></i>
+                
           </div>
 
           <div className="culture-text-image-div">
@@ -91,9 +105,13 @@ export default function index() {
             <div className="culture-text-div">
               <h3 className="">En Afrique,</h3>
 
-              <h4 className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam. Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum magna</h4>
+              <h5 className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam. Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum magna</h5>
 
-              <a>Visitez</a>
+              <Link href="/discover">
+                  <a>Visitez</a>
+              </Link>
+              
+              
             </div>
           </div>
         </div>
@@ -101,6 +119,7 @@ export default function index() {
         <div className="cuisine-div">
             <div className="div-title">
                   <h1>Découvrez notre cuisine</h1>
+                  <i style={{textAlign:"center",paddingBottom:'2rem'}} className="fas fa-asterisk"></i>
               </div>
 
               <div className="cuisine-images-carousel">
@@ -116,23 +135,31 @@ export default function index() {
               <div className="cuisine-div-text">
               <h3 className="">En Afrique,</h3>
 
-              <h4 className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam. Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum magna</h4>
+              <h5 className="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam. Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum magna</h5>
 
-              <a >Visitez</a>
+              <Link href="/discover">
+                  <a>Visitez</a>
+              </Link>
+
             </div>
         </div>
 
 
         <div className="culture">
-              <h1 style={{textAlign:'center'}}>culture</h1>
+            <div className="div-title">
+                      <h1>Découvrez notre culture</h1>
+                      <i style={{textAlign:"center",paddingBottom:'2rem'}} className="fas fa-asterisk"></i>
+              </div>
            
            <div style={{width:'100%',height:'80%',filter:'drop-shadow(6px 6px 8px black)',WebkitFilter:'drop-shadow(6px 6px 8px black)'}}>
              <LazyLoadImage alt="undefined" src={'/images/three-women-wearing-black-clothe.jpg'} width="100%" height="100%" style={{objectFit:'contain'}} />
            </div>
-              <div style={{textAlign:'center',marginTop:'1rem'}}>
+              <div style={{textAlign:'center',paddingTop:'2rem'}}>
              <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam. Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum magna</span>
               
-              <a >Parcourir</a>
+             <Link href="/discover">
+                  <a>Parcourir</a>
+              </Link>
               </div>
 
         </div>
@@ -219,7 +246,7 @@ export default function index() {
           
      </div>
 
-     <style jsx>{`
+     <style jsx global>{`
 
 
 
@@ -227,9 +254,9 @@ export default function index() {
       .presentation{
         display:block;
         text-align:center;
-        position:absolute;
-        top:50%;
-        
+        position:relative;
+        top:30%;
+       
         transform:translate(-50%,50%)
         color:white;
         z-index:1500;
@@ -237,7 +264,7 @@ export default function index() {
        
       }
 
-      .presentation h3{
+      .presentation span{
         padding:0;
         margin:0;
        color:rgba(45,45,45,1);
@@ -262,7 +289,7 @@ export default function index() {
        display:inline-block;
        border-style:solid;
        border-color:#fff;
-        padding: 2% 10% 2% 10% ;
+        padding: 2% 7% 2% 7% ;
         margin-top: 3vh ; 
         background-color: #020202 ;
         color : #fefcfc ;
@@ -271,6 +298,8 @@ export default function index() {
        letter-spacing: 0.1em;
      
       }
+
+      
 
       .index-header{
          
@@ -295,7 +324,7 @@ export default function index() {
        position:absolute;
       
        background-color:black;
-       opacity:0.3
+       opacity:0.5
       }
 
       .main-business{

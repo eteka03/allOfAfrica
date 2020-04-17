@@ -61,7 +61,7 @@ $shadow: rgba($yellow, .5);
                 font-size: 5rem;
                 text-align: left;
                 color:$yellow;
-                width: 100%;
+                
                 z-index: 5;
                 text-shadow: none;
                 position: absolute;
@@ -156,6 +156,7 @@ $shadow: rgba($yellow, .5);
 
              h5{
                font-weight: bold;
+               padding-top: 1rem;
              }
 
          }
@@ -170,12 +171,16 @@ $shadow: rgba($yellow, .5);
     
 }
 
+.explore-link:hover{
+  cursor: pointer;
+}
+
 .culture-div{
 
- height: 80vh;
+ height: 100%;
  display: block;
  margin-top: 10vh;
-
+overflow: hidden;
  a{
      width: 50%;
      display: inline-block;
@@ -193,12 +198,26 @@ $shadow: rgba($yellow, .5);
 
     .div-title{
         display: inline-block;
-     
+        text-align: center;
+        padding-bottom: 2rem;
+        h1{
+         
+          font-size: 2rem;
+          font-weight: bold;
+          
+          font-family: "Arial Black", Gadget, sans-serif
+        }
+        h2{
+          color: #f0ad1e ;
+          padding-bottom: 2rem;
+        
+        }
     }
 
     .culture-text-image-div{
         height: 90%;
-        
+        overflow-y: auto;
+scrollbar-width: none;
     }
 
     .culture-image-div{
@@ -289,6 +308,24 @@ $shadow: rgba($yellow, .5);
 
 .cuisine-div{
 
+  .div-title{
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 2rem;
+    h1{
+     
+      font-size: 2rem;
+      font-weight: bold;
+      
+      font-family: "Arial Black", Gadget, sans-serif
+    }
+    h2{
+      color: #f0ad1e ;
+      padding-bottom: 2rem;
+    
+    }
+}
+
     .cuisine-images-carousel{
       overflow-x: hidden;
         width: 100%;
@@ -303,11 +340,11 @@ $shadow: rgba($yellow, .5);
             top: 0;
             left: calc(10%-100px);
             opacity: 0;
-            animation: slide 10s infinite;
+            animation: slide 6s infinite;
         }
 
         div:nth-child(2){
-            animation-delay: 5s;
+            animation-delay: 3s;
         }
 
         div > img{
@@ -322,6 +359,27 @@ $shadow: rgba($yellow, .5);
       clear: both;
      
   }
+}
+
+
+.culture{
+  .div-title{
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 2rem;
+    h1{
+     
+      font-size: 2rem;
+      font-weight: bold;
+      
+      font-family: "Arial Black", Gadget, sans-serif
+    }
+    h2{
+      color: #f0ad1e ;
+      padding-bottom: 2rem;
+    
+    }
+}
 }
 
 
@@ -426,8 +484,7 @@ background-color: rgba($color: #000000, $alpha: 0.1)
     }
       
     .presentation{
-      transform: translate(50%,-70%);
-      -webkit-transform: translate(50%,-70%);
+      left: -20%;
     }
   }
   

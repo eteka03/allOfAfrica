@@ -23,6 +23,8 @@ Input,
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+import {NextSeo} from 'next-seo'
+
 
 const categories =  [
     {
@@ -78,6 +80,13 @@ const Discover = ({countries}) => {
     return(
         <Container className="discover-container" style={{padding: 0,maxWidth:'100%' , margin: 0}}>
           
+
+          <NextSeo 
+          title="discover page"
+          description="page qui presente les hotels et restaurants"
+        />
+
+
             <header className="discover-header" style={{backgroundImage:'url(/images/pagne.jpg)',backgroundSize:'cover',backgroundRepeat:'no-repeat'}}>
           
             </header>

@@ -1,88 +1,52 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  NavbarText
+} from 'reactstrap';
 
-export default function Navbar() {
+const NavBar = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    const [isOpen,setIsOpen] = useState(false);
-    const responsive = ''
+  const toggle = () => setIsOpen(!isOpen);
 
-    const handleClick = (e) => {
-            e.preventDefault();
-            setIsOpen(!isOpen)
-        
-        
-    }
+  return (
+    <div >
+      <Navbar  color="white" light   expand="md">
+        <NavbarBrand href="/" src=''><img style={{objectFit:'contain',width:'55px',height:'80%'}} src='/images/logo_transparent.png' title="logo" alt="logo" /></NavbarBrand>
+        <NavbarToggler  onClick={toggle}  className="mr-2"/>
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className='ml-auto'  navbar>
+            <NavItem>
+              <NavLink className="nav-style" href="/">Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink className="nav-style" href="/discover">discover</NavLink>
+            </NavItem>
+         
+          </Nav>
+         
+        </Collapse>
+      </Navbar>
+
+  <style jsx global>{`
   
-    return (
-    <nav className={`navigation-top ${isOpen ? "responsive" : " "}`}>
-        <a href="/">Home</a>
-
-        <a href="/">Destinations</a>
-
-        <a href="/">Restaurants</a>
-
-        <a href="/">Hotels</a>
+  .nav-style{
+      color:black;
+      font-weight:bold;
+  }
         
-
-      <a  className={`icon ${isOpen ? "responsive" : ""}`} onClick={(e)=>handleClick(e)}>
-          <i className="fa fa-bars"></i>
-      </a>  
-
-        <style jsx>{`
-        
-        .navigation-top{
-            width:100%;
-           
-            background-color:transparent
-        }
-        
-        .navigation-top a{
-            display: block;
-            float:left;    
-            text-align:center;
-            text-decoration: none;
-            padding:10px
-        }
-
-        .navigation-top a:hover{
-            background-color:black;
-            color:white;
-        }
-
-        .navigation-top .icon{
-            display:none;
-        }
-
-        @media screen and (max-width:600px){
-
-            .navigation-top a:not(:first-child){
-                display:none
-            }
-
-            .navigation-top a.icon{
-                display:block;
-                float:right
-            }
-        }
-
-        @media screen and (max-width:600px){
-            .navigation-top.responsive{position:relative}
-
-            .navigation-top.responsive .icon{
-                position:absolute;
-                right:0;
-                top:0;
-            }
-
-            .navigation-top.responsive a {
-                float:none;
-                display:block;
-                text-align:center;
-            }
-        }
-       
-        `}</style>
-        </nav>
+  
+  `}</style>
+    </div>
 
 
-    )
+  );
 }
+
+export default NavBar;

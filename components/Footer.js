@@ -40,7 +40,7 @@ export default function Footer(props) {
                         <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
                    
                         <Label for="exampleText">Message</Label>
-                         <Input type="textarea" name="text" id="exampleText" />
+                         <Input  type="textarea" name="text" id="exampleText" />
                    
                     </FormGroup>
                     <Button style={{backgroundColor:'white',color:'black'}}>Envoyer</Button>
@@ -51,14 +51,14 @@ export default function Footer(props) {
                  <h3>Follow Us</h3>
 
                  <div className="social-media-div">
-                 <a href="https://www.facebook.com/allofafrica">
-                   <Face />
+                 <a  href="https://www.facebook.com/allofafrica">
+                 <i className="fab fa-facebook-f fa-3x" ></i>
 
                    </a>
 
                    <a href="https://www.instagram.com/all_of_africa_aoa">
                  
-                    <Instagram />
+                   <i className="fab fa-instagram fa-3x"></i>
                    </a>
              
                    </div>
@@ -68,9 +68,9 @@ export default function Footer(props) {
                        <p>Tel:</p>
                         <a href="tel:+1-347-272-7227">+1 (347) 272-7227 (USA)</a>
                         <a href="tel:+33788 735324">+33 788 735324 (France)</a>
-                        <a href="tel:+221778012953">+221 7780 12953" (Dakar)</a>
+                        <a href="tel:+221778012953">+221 7780 12953 (Dakar)</a>
 
-                        <p style={{lineHeight:'1.5rem'}}>Email: </p>
+                        <p >Email: </p>
                       <a href="mailto:alloafrica@outlook.fr">alloafrica@outlook.fr</a>
                     </address>  
                    </div>
@@ -93,7 +93,10 @@ export default function Footer(props) {
         color:${props.styl.couleur}
     }
 
-
+    .footer-container h3{
+        color:#f0ad1e;
+        padding-bottom:1rem;
+    }
    
 
     .about-div{
@@ -132,6 +135,11 @@ export default function Footer(props) {
       
     }
 
+    .tel-mail-div p{
+        padding-top:1rem;
+        font-weight: bold;
+    }
+
     .copyright-div{
         display:block;
         width:100%;
@@ -139,6 +147,8 @@ export default function Footer(props) {
         border-top-style:solid;
         border-width:1px;
     }
+
+
     
     `}</style>
             </Container>
